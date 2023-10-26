@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Triangulo.MainPage">
+
+    <StackLayout>
+
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Calcular Area De Un Triangulo" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Padding="20,20,20,20">
+            <Grid>
+
+                <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center"  Text="Base"/>
+                <Entry Grid.Column="1" Grid.Row="0" Margin="-100,0,0,0"  Placeholder="Base" x:Name="BaseDeTriangulo" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" Text="Lado 1"/>
+                <Entry Grid.Column="1" Grid.Row="1" Margin="-100,0,0,0"  Placeholder="Lado 1" x:Name="Lado1" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center" Text="Lado 2"/>
+                <Entry Grid.Column="1" Grid.Row="2" Margin="-100,0,0,0" Placeholder ="Lado 2" x:Name="Lado2" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="3" VerticalOptions="Center" />
+                <Entry Grid.Column="1" Grid.Row="3" Margin="-100,0,0,0" Placeholder ="Altura" x:Name="Altura" Keyboard="Numeric"/>
+
+                <Label Grid.Column="0" Grid.Row="4" VerticalOptions="Center" Text="Altura" />
+                <Entry Grid.Column="1" Grid.Row="4" Margin="-100,0,0,0" Placeholder="Area" x:Name="Area" IsEnabled="False"/>
+
+                <Button Grid.ColumnSpan="2" Grid.Row="5" Text="Calcular Area" Clicked="Button_Clicked"/>
+
+
+
+            </Grid>
+            <Image Source="equilatero.png" HeightRequest="180" x:Name="ImgTrinaguloequilatero" IsVisible="False"/>
+            <Image Source="ImgIsoceles.png" HeightRequest="180" x:Name="ImgTrinaguloEscaleno" IsVisible="False"/>
+            <Image Source="isoseles.png" HeightRequest="180" x:Name="ImgTrinaguloIsoceles" IsVisible="False"/>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
